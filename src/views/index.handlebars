@@ -1,0 +1,67 @@
+{{!-- <section class="contenedor-chat">
+    <div class="header"></div>
+    <div class="chat">
+        <i id="username"></i> <input type="text" id="chatbox">
+    </div>
+    <div id="messagesLog">
+        
+    </div>
+</section> --}}
+
+<div class="header-top">
+    <h1>Clon Telegram</h1>
+    <p></p>
+</div>
+
+
+<section class="contenedor">
+    <div class="header">
+        <button type="button" title="Salir" id="disconnect-button"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="contenedor-info-header">
+        <h3>Telegram</h3>
+        <span>🟢 Online</span>
+        </div>
+        <div class="contenedor-imagen">
+            <i class="fa-brands fa-telegram"></i>
+        </div>
+        <i></i>
+    </div>
+    <div class="contenedor-chat" id="messagesLog">
+        
+    <div class="container-username">
+
+    <span id="username"></span>
+    </div>
+    </div>
+    <div class="contenedor-input">
+        <button id="button-emoji" data-title="Emojis"><i class="fa-regular fa-face-smile"></i></button>
+        <input type="text" id="chatbox" title="Escribir" placeholder="Escribe algo"> 
+        <button id="send-button" class="fa-solid fa-arrow-up"></button>
+    </div>
+    <div class="container-emojis" id="container-emoji">
+        <span id ="emoji">😀</span>
+        <span id ="emoji">😁</span>
+        <span id ="emoji">😎</span>
+        <span id ="emoji">🤔</span>
+        <span id ="emoji">🤣</span>
+        <span id ="emoji">😅</span>
+        <span id ="emoji">😲</span>
+        <span id ="emoji">💀</span>
+        <span id ="emoji">🤑</span>
+        <span id ="emoji">🤨</span>
+        <span id ="emoji">😂</span>
+        <span id ="emoji">😐</span>
+        <span id ="emoji">💪</span>
+        <span id ="emoji">👍</span>
+        <span id ="emoji">🕵️‍♂️</span>
+        <span id ="emoji">☕</span>
+        <span id ="emoji">🐱‍👤</span>
+        <span id ="emoji">👀</span>
+        <span id ="emoji">🛸</span>
+    </div>
+</section>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/index.js"></script>
