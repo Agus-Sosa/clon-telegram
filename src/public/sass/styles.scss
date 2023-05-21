@@ -93,6 +93,24 @@ body {
 }
 
 
+#messagesLog {
+    animation: messageAnimation 0.5s ease-in-out;
+}
+
+
+@keyframes messageAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
 .contenedor-imagen {
     margin-left: auto;
     i {
@@ -231,15 +249,29 @@ body {
     margin: 10px;
 }
 
+.contenedor-usuario_mensajes { 
+    display: flex;
+    align-items: center;
+    margin: 0px 24px;
+    .contenedor-img_user {
+        padding: 9px;
+        background: rgb(182, 182, 182);
+        border-radius: 100%;
+        margin-top: auto;
+        color: rgb(77, 77, 77);
+
+    }
+}
+
 .contenedor-mensajes {
     background-color: #292929;
     color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
     border-radius: 19px 19px 23px 0px;
     // width: ma;'
-    max-width: 14pc;
+    width: 12pc;
     padding: 10px;
-    margin: 25px 20px;
+    margin: 25px 10px;
     p{
         margin: 0px;
     }

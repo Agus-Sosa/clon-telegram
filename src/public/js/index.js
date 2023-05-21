@@ -7,7 +7,7 @@ let chatBox = document.getElementById('chatbox')
 Swal.fire({
     title: 'Autenticacion para el chat',
     input: 'text',
-    text: 'Introduce un username for the WhatsApp chat',
+    text: 'Introduce un nombre para entrar al chat de telegram',
     inputAttributes: {
         maxLength: 5
     },
@@ -80,10 +80,16 @@ Swal.fire({
         let messages = ''
         data.forEach(message =>{
             // messages += `<p>[<i>${message.user}</i>]: ${message.message}</p>`
-            messages += `<div class="contenedor-mensajes"> 
+            messages += `
+                        <section class="contenedor-usuario_mensajes">
+                        <span class="contenedor-img_user fa-solid fa-user"></span>
+                        <div class="contenedor-mensajes"> 
                         <p>${message.user}</p>
                         <p>${message.message}</p>
-                        </div>`
+                        </div>
+                        </section>
+
+                        `
         })
         messagesLog.innerHTML = messages
     })

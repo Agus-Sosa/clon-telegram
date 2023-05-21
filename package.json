@@ -9,14 +9,16 @@
   },
   "name": "chat-whatsapp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/app.js",
   "devDependencies": {
     "sass": "^1.62.1"
   },
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "sass --watch ./src/public/sass:./src/public/css"
+    "start": "node .",
+    "dev": "nodemon .",
+
+    "sass": "sass --watch src/public/sass:src/public/css"
   },
   "keywords": [],
   "author": "",
