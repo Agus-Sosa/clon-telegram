@@ -9,7 +9,7 @@ Swal.fire({
     input: 'text',
     text: 'Introduce un nombre para entrar al chat de telegram',
     inputAttributes: {
-        maxLength: 5
+        maxLength: 5 
     },
     inputValidator: value => !value.trim() && 'Porfavor escribe un usuario para continuar',
     allowOutsideClick: false,    /* Activar antes de mandar a GitHub */
@@ -20,9 +20,6 @@ Swal.fire({
     socket = io()
     document.getElementById('username').innerHTML = user
     
-    
-
-    
     let emojis = document.querySelectorAll('#emoji')
     let buttonEmojis = document.getElementById('button-emoji')
     let containerEmojis = document.getElementById('container-emoji')
@@ -30,19 +27,6 @@ Swal.fire({
     buttonEmojis.addEventListener('click', ()=> {
         containerEmojis.classList.toggle('open-emojis')
     })
-
-    // chatBox.addEventListener('keyup', event => {
-    //     if (event.key === 'Enter') {
-    //         if(chatBox.value.trim().length > 0) {
-    //             socket.emit('message',{
-    //                 user,
-    //                 message: chatBox.value
-    //             })
-    //             chatBox.value = ''
-    //         }
-    //     }
-    // })
-
 
     const inputMessage = () => {
                 if(chatBox.value.trim().length > 0) {
@@ -59,7 +43,7 @@ Swal.fire({
 
 
     const sendMessage = document.getElementById('send-button')
-    sendMessage.addEventListener('click', () => {
+    sendMessage.addEventListener("click", () => {
         
         inputMessage()
     })
@@ -71,7 +55,6 @@ Swal.fire({
     }
 
 
-/* enviar imagenes prueba */
 
 
 
