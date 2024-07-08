@@ -292,7 +292,7 @@ body {
     display: flex;
     overflow-y: scroll;
 
-    flex-direction: column-reverse;
+    flex-direction: column;
     &::-webkit-scrollbar {
         width: 0px;
     }
@@ -423,6 +423,11 @@ body {
     width: 12pc;
     padding: 10px;
     margin: 25px 10px;
+
+    & .user_message_name {
+      font-size: 14px;
+      font-weight: bold;
+    }
     p{
         margin: 0px;
     }
@@ -461,6 +466,14 @@ body {
 }
 
 
+.contenedor_detalle_mensajes {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  & span {
+    font-size: 11px;
+  }
+}
 
 
 
@@ -471,18 +484,18 @@ body {
 //     }
 // }
 
-@media (width < 450px) {
-  body {
-  min-height: auto;
-  }
+// @media (width < 450px) {
+//   body {
+//   min-height: auto;
+//   }
 
-  .contenedor {
-    width: 100%;
-    margin: 0 auto;
-  }
+//   .contenedor {
+//     width: 100%;
+//     margin: 0 auto;
+//   }
 
-  .contenedor-chat {
-    min-height: 100vh;
-    overflow-y: auto;
-  }
-}
+//   .contenedor-chat {
+//     min-height: 100vh;
+//     overflow-y: auto;
+//   }
+// }

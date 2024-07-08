@@ -55,20 +55,34 @@ Swal.fire({
     }
 
 
+    const getTimeStamp =() => {
+        const now = new Date();
+        const options = {
+            hour: "numeric",
+            minute: "numeric",
+        }
+    const formattedTime = now.toLocaleTimeString("es-AR",options);
+    return formattedTime
+    }
+
 
 
 
     socket.on('logs', data =>{
         const messagesLog = document.getElementById('messagesLog')
         let messages = ''
+        const timeStamp = getTimeStamp();
         data.forEach(message =>{
             // messages += `<p>[<i>${message.user}</i>]: ${message.message}</p>`
             messages += `
                         <section class="contenedor-usuario_mensajes">
                         <span class="contenedor-img_user fa-solid fa-user"></span>
                         <div class="contenedor-mensajes"> 
-                        <p>${message.user}</p>
-                        <p>${message.message}</p>
+                        <p class="user_message_name">${message.user}</p>
+                        <div class="contenedor_detalle_mensajes">
+                            <p>${message.message}</p>
+                            <span>${timeStamp}</span>
+                        </div>
                         </div>
                         </section>
 

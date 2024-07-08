@@ -256,7 +256,7 @@ body {
   height: 500px;
   display: flex;
   overflow-y: scroll;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 .contenedor-chat::-webkit-scrollbar {
   width: 0px;
@@ -364,6 +364,10 @@ body {
   padding: 10px;
   margin: 25px 10px;
 }
+.contenedor-mensajes .user_message_name {
+  font-size: 14px;
+  font-weight: bold;
+}
 .contenedor-mensajes p {
   margin: 0px;
 }
@@ -397,18 +401,13 @@ body {
   text-shadow: 3px 3px gray;
 }
 
-@media (width < 450px) {
-  body {
-    min-height: auto;
-  }
-  .contenedor {
-    width: 100%;
-    margin: 0 auto;
-  }
-  .contenedor-chat {
-    min-height: 100vh;
-    overflow-y: auto;
-  }
+.contenedor_detalle_mensajes {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+.contenedor_detalle_mensajes span {
+  font-size: 11px;
 }
 
 /*# sourceMappingURL=styles.css.map */
